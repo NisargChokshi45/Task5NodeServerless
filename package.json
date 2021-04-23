@@ -1,0 +1,17 @@
+{
+  "name": "task5serverlesslambda",
+  "version": "1.0.0",
+  "description": "AWS Serverless Lambda",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AWS",
+    "Serverless",
+    "Lambda",
+    "DynamoDB"
+  ],
+  "author": "",
+  "license": "ISC"
+}
