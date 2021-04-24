@@ -60,6 +60,31 @@ provider:
 functions:
     hello:
         handler: src/controllers/defaultController.handler
+        events:
+            - http:
+                path: /hello
+                method: GET
+                cors: true
+
+    todos: 
+        handler: src/controllers/toDos.handler
+        events:
+            - http:
+                path: /todos
+                method: GET
+                cors: true
+
+    todo:
+        handler: src/controllers/toDo.handler
+        events:
+            - http:
+                path: /todo/{id}
+                method: GET
+                cors: true
+                request:
+                    parameters:
+                        id: true
+
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -111,3 +136,6 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+plugins:
+    - serverless-offline

@@ -5,14 +5,16 @@
 // Locally context stores almost nothing
 // Callback is same as the Node pattern (error, data)
 module.exports.handler = async (event, context, callback) => {
-    // return {
-    //     statusCode: 200,
-    //     body: {
-    //         message: "Creating lambda function",
-    //         input: event,
-    //     },
-    // };
+    callback(null, {
+        statusCode: 200,
+        headers: {},
+        body: JSON.stringify({
+            is_error: false,
+            message: "Lambda Executed for /hello Route",
+            data: "AWS Serverless"
+        })
+    })
 
     // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-    return { message: 'Going Serverless! The Lambda Function executed successfully', input: event };
+    // return { message: 'Going Serverless! The Lambda Function executed successfully', input: event };
 };

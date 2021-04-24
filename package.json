@@ -4,7 +4,8 @@
   "description": "AWS Serverless Lambda",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lamda": "sls offline start --port 4500"
   },
   "keywords": [
     "AWS",
@@ -13,5 +14,10 @@
     "DynamoDB"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0",
+    "serverless-offline": "^6.9.0"
+  }
 }
