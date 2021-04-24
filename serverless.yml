@@ -58,32 +58,38 @@ provider:
 #    - include-me-dir/**
 
 functions:
-    hello:
-        handler: src/controllers/defaultController.handler
+    api:
+        handler: src/controllers/api.handler
         events:
-            - http:
-                path: /hello
-                method: GET
-                cors: true
+            - http: ANY /
+            - http: 'ANY /{param+}'
 
-    todos: 
-        handler: src/controllers/toDos.handler
-        events:
-            - http:
-                path: /todos
-                method: GET
-                cors: true
+    # hello:
+    #     handler: src/controllers/defaultController.handler
+    #     events:
+    #         - http:
+    #             path: /hello
+    #             method: GET
+    #             cors: true
 
-    todo:
-        handler: src/controllers/toDo.handler
-        events:
-            - http:
-                path: /todo/{id}
-                method: GET
-                cors: true
-                request:
-                    parameters:
-                        id: true
+    # todos: 
+    #     handler: src/controllers/toDos.handler
+    #     events:
+    #         - http:
+    #             path: /todos
+    #             method: GET
+    #             cors: true
+
+    # todo:
+    #     handler: src/controllers/toDo.handler
+    #     events:
+    #         - http:
+    #             path: /todo/{id}
+    #             method: GET
+    #             cors: true
+    #             request:
+    #                 parameters:
+    #                     id: true
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

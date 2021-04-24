@@ -5,7 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lamda": "sls offline start --port 4500"
+    "lambda": "sls offline start --port 4500"
   },
   "keywords": [
     "AWS",
