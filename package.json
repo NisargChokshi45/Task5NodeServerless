@@ -4,7 +4,7 @@
   "description": "AWS Serverless Lambda",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lambda": "sls offline start --port 4500"
   },
   "keywords": [
@@ -17,7 +17,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "serverless-http": "^2.7.0",
-    "serverless-offline": "^6.9.0"
+    "serverless-offline": "^6.9.0",
+    "supertest": "^6.1.3"
   }
 }
